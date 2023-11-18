@@ -4,7 +4,7 @@ type Action = |{type: "START_REQUEST"} | {type:"PENDING_REQUEST"} | {type:"FINIS
 
 type State = {
   isRequestInProgress: boolean;
-  requestStep: string;
+  requestStep: "idle" | "start" | "pending" | "finished";
 }
 
 const initialState: State = {
